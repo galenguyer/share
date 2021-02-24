@@ -213,7 +213,7 @@
         drop.on('error', function(file, response) {
             console.log('error');
             console.log(response);
-            document.getElementById("errormessage").innerText = response.message;
+            document.getElementById("errormessage").innerText = response.message != null ? response.message : response;
             // TODO: display this error
             drop.removeAllFiles();
         });
